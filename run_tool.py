@@ -32,6 +32,10 @@ def blackbox(swagger, port):
             run = "python main.py " + swagger
             options = " http://localhost:" + str(port)
             subprocess.run(run + options, shell=True)
+        elif tool == "smartapitester":
+            run = "python smartapitester.py " + swagger
+            options = " http://localhost:" + str(port)
+            subprocess.run(run + options, shell=True)
         elif tool == "no_prioritization":
             run = "python no_prioritization.py " + swagger
             options = " http://localhost:" + str(port)
